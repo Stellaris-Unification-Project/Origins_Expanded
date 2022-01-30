@@ -1395,10 +1395,12 @@ country_event = {
 		capital_scope = { 
 			while = {
 				count = 10
-				random_pop = {
+				random_owned_pop = {
 					limit = { 
-						NOT = { has_trait = trait_latent_psionic }
-						NOT = { has_trait = trait_psionic }
+						NOR = {
+							has_trait = trait_latent_psionic
+							has_trait = trait_psionic
+						}
 					}
 					modify_species = {
 						species = this

@@ -10,9 +10,9 @@ generate_second_species = {
 		}
 		while = {
 			count = 14
-			random_pop = {
+			random_owned_pop = {
 				limit = { NOT = { is_same_species = last_created_species } }
-				change_species = last_created
+				change_species = last_created_species
 			}
 		}
 	}
@@ -27,9 +27,9 @@ generate_second_species = {
 		}
 		while = {
 			count = 8
-			random_pop = {
+			random_owned_pop = {
 				limit = { NOT = { is_same_species = last_created_species } }
-				change_species = last_created
+				change_species = last_created_species
 			}
 		}
 	}
@@ -103,7 +103,7 @@ generate_oppressor_species = {
 		while = {
 			count = 6
 			create_pop = {
-			species = last_created
+			species = last_created_species
 			}
 		}
 	}
@@ -121,7 +121,7 @@ generate_oppressor_species = {
 		}
 		while = {
 			count = 4
-			random_pop = {
+			random_owned_pop = {
 				limit = {
 					NOT = { is_same_species = owner_species }
 				}
@@ -144,7 +144,7 @@ generate_oppressor_species = {
 		while = {
 			count = 1
 			create_pop = {
-			species = last_created
+			species = last_created_species
 			}
 		}
 	}
